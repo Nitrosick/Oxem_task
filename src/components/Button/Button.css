@@ -1,0 +1,72 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 68px;
+  max-width: 425px;
+  padding: 8px;
+  align-self: flex-end;
+  background-color: #FF9514;
+  border-radius: 40px;
+  border: none;
+  color: white;
+  font-size: 30px;
+  line-height: 36px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #111111;
+  transition: 0.2s;
+}
+.button:active {
+  background-color: #575757;
+}
+.button:disabled {
+  background: rgba(255, 149, 20, 0.4);
+  cursor: default;
+}
+.button.loading:disabled {
+  background-color: #FF9514;
+}
+.button_loader {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  animation: spin 3s infinite linear;
+}
+.button_loader::before {
+  position: absolute;
+  content: '';
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: #FF9514;
+  border-radius: 50%;
+}
+.button_loader::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  width: 10px;
+  height: 5px;
+  margin-left: -5px;
+  background-color: #FF9514;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 768px) {
+  .button {
+    font-size: 22px;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,121 @@
+.range .plug {
+  flex-grow: 1;
+}
+.range_box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 7px;
+  background-color: #F3F3F4;
+  border-radius: 16px;
+}
+.range_value {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  font-size: 30px;
+  line-height: 36px;
+  background-color: transparent;
+  border: none;
+  border-radius: 16px;
+  padding-left: 22px;
+}
+.range_value:focus,
+.range_value:active {
+  outline: none;
+  background-color: white;
+}
+.range_value::-webkit-outer-spin-button,
+.range_value::-webkit-inner-spin-button {
+  appearance: none;
+}
+.range_value_percent {
+  font-size: 30px;
+  line-height: 36px;
+  padding-left: 17px;
+}
+.range_measure {
+  position: relative;
+  font-size: 30px;
+  line-height: 54px;
+  margin: 0 16px;
+  z-index: 1;
+}
+.range_percent_box {
+  width: 70px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EBEBEC;
+  border-radius: 16px;
+  font-size: 20px;
+}
+.range_percent {
+  text-align: right;
+  background-color: transparent;
+  border: none;
+  max-width: 30px;
+  font-size: 20px;
+}
+.range_percent:focus,
+.range_percent:active {
+  outline: none;
+}
+.range_percent::-webkit-outer-spin-button,
+.range_percent::-webkit-inner-spin-button {
+  appearance: none;
+}
+.range_input {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  right: 24px;
+  height: 2px;
+  background-color: transparent;
+  appearance: none;
+  outline: none;
+  z-index: 2;
+}
+.range_input::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background-color: #FF9514;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.range_input_progress {
+  position: absolute;
+  bottom: 0;
+  left: 24px;
+  right: 24px;
+  height: 2px;
+  background-color: #E1E1E1;
+}
+.range_input_progress .line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background-color: #FF9514;
+}
+.range.disabled {
+  opacity: 0.3;
+}
+@media screen and (max-width: 768px) {
+  .range_value {
+    font-size: 22px;
+    line-height: 20px;
+  }
+  .range_value_percent {
+    font-size: 22px;
+    line-height: 20px;
+  }
+  .range_measure {
+    font-size: 22px;
+  }
+}
